@@ -8,7 +8,7 @@ Creare la classe `StatsFileWords` con relativo JUnit di test `StatsFileWordsTest
 La classe implementa l'interfaccia `StreamWords` contenente le funzionalità relative alle statistiche di un file.
 All'interno della classe è presente un solo costruttore con il nome del file da trattare.
 
-> **Nota:** Il file contiene parole separate da uno o più spazi ed è possibile che contenga anche una o più righe vuote o spazi.
+> **Nota:** Il file `wordsstream.txt` contiene parole separate da uno o più spazi ed è possibile che contenga anche una o più righe vuote o spazi.
 
 ```java
 class StatsFileWords implements StreamWords {
@@ -42,3 +42,14 @@ public interface StreamWords {
     /* 6. Returns a string with all file words concatenated */
     String wordsJoined() throws IOException;
 }
+```
+
+**wordsstream.txt**
+
+```txt
+parola1 parola2 parola3 parola4
+parola11 parola22    parola33 parola44
+   
+parola2  parola1   parola4
+
+```
