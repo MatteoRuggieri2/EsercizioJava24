@@ -1,0 +1,4 @@
+parola1 parola2 parola3 parola4
+parola11 parola22    parola33 parola44
+   
+parola2  parola1   parola4
