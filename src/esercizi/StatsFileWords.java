@@ -34,7 +34,7 @@ public class StatsFileWords implements StreamWords {
 		this.fileWords = Files.lines(path, StandardCharsets.UTF_8)
 				          .flatMap(line -> Stream.of(line.split(" +"))) // Separo le parole con il delimitatore "uno o più spazi"
 				          .filter(s -> !s.isEmpty()) // Filtro le righe, tengo solo quelle che non sono vuote
-			        	  .map((s) -> s.toUpperCase()) // Trasformo tutte le parole in maiuscolo (per il sort, dato che per il riordinamento fa casini se ci sono parole con lettere minuscole o maiuscole mischiate).
+			        	  .map(s -> s.toUpperCase()) // Trasformo tutte le parole in maiuscolo (per il sort, dato che per il riordinamento fa casini se ci sono parole con lettere minuscole o maiuscole mischiate).
 				          .sorted() // Le metto in ordine alfabetico
 				          .toArray(String[]::new);
 //		                  .forEach((s) -> System.out.println(s)); // Stampo ogni parola
