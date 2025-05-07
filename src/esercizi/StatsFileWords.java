@@ -31,6 +31,9 @@ public class StatsFileWords implements StreamWords {
 		
 		File file = new File(this.nomeFile);
 		Path path = file.toPath();
+		
+		System.out.println("File path assoluto: " + file.getAbsolutePath());
+
 		this.fileWords = Files.lines(path, StandardCharsets.UTF_8)
 				          .flatMap(line -> Stream.of(line.split(" +"))) // Separo le parole con il delimitatore "uno o più spazi"
 				          .filter(s -> !s.isEmpty()) // Filtro le righe, tengo solo quelle che non sono vuote
