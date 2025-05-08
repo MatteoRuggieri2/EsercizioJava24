@@ -22,7 +22,7 @@ class StatsFileWordsTest {
 	void testWords() throws IOException {
 		String[] testWordsArray = {"PAROLA1", "PAROLA1", "PAROLA11", "PAROLA2", "PAROLA2", "PAROLA22", "PAROLA3", "PAROLA33", "PAROLA4", "PAROLA4", "PAROLA44"};
 		assertArrayEquals(testWordsArray, sfw.words());
-		assertThrows(IOException.class, () -> new StatsFileWords(filePath + "err"));
+		assertThrows(IOException.class, () -> new StatsFileWords(filePath + "err")); // Test lancio IOException
 	}
 	
 	@Test
